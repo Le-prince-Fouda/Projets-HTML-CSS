@@ -1,0 +1,49 @@
+.bob{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color:skyblue;
+    transition: 1s cubic-bezier(0.85, 0.16, 0.51, 1.81)/*effet de rebondi en fin d'animation*/ .20ms;
+}
+.bob:hover{
+    rotate: 90deg;
+    scale: 1.5;
+}
+h1{
+    text-align: center;
+}
+.bobi{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    animation: laby 2s;
+    animation-fill-mode: forwards; /*indique que l'element anime reste a la position qu'il a en fin d'annimation*/
+    animation-iteration-count: infinite;
+}
+.bobi:hover{
+    animation-play-state: paused;
+}
+@keyframes laby {
+    25%{
+        translate: 100px;
+        rotate: 0deg;
+    }
+    50%{
+        translate: 100px 100px;
+        rotate: 0deg;
+    }
+    75%{
+        translate: 0px 100px;
+        rotate: 0deg;
+    }
+    100%{
+        translate: 0 100px;
+        rotate: 360deg;
+    }
+    
+}
