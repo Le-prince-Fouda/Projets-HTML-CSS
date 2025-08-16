@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
+/*here we create variable that contain propertythat we will use more than 1 time*/
+:root{
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -13,4 +19,88 @@ body{
     height: 100vh;
     overflow: hidden;
     margin: 0;
+
+}
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+/*here we add a gray line that will be like a progressbar whitout evolution*/
+/*the specification ::befor will do that this become smallerwhen the progressbar become longer*/
+.progress-container::before{
+    content: ''; /* when we use the tag: '::beforor ::after' we must always to use this property to introduce something (to introduce whatwe want to introduce befor or after the cibling's element)*/
+    background-color: var(--line-border-empty); /*here we use one variable that we have created*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);/*to put the line in the middle of his parent*/
+    height: 4px;
+    width: 100%;
+    z-index: -1; /*to make sure that the progressbar is behindthe numbers*/
+}
+
+/*Progressbar*/
+/*same like the gray line befor, it represent the evolution of the progression. */
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);/*to put the line in the middle of his parent*/
+    height: 4px;
+    width: 0%;
+    z-index: -1; /*to make shurt that the progressbar is behindthe numbers*/
+    transition: 0.4s ease;
+}
+
+/*this are circles that represent the different steps*/
+.circle{
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: .4s ease;
+}
+
+.circle.active{
+    border-color: var(--line-border-fill);
+}
+
+.btn{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer; /*here we change the look of the cursor, we show a hand*/
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
 }
