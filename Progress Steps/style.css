@@ -45,7 +45,7 @@ body{
     transform: translateY(-50%);/*to put the line in the middle of his parent*/
     height: 4px;
     width: 100%;
-    z-index: -1; /*to make sure that the progressbar is behindthe numbers*/
+    z-index: -1; /*to make sure that the progressbar is behind the numbers*/
 }
 
 /*Progressbar*/
@@ -58,7 +58,7 @@ body{
     transform: translateY(-50%);/*to put the line in the middle of his parent*/
     height: 4px;
     width: 0%;
-    z-index: -1; /*to make shurt that the progressbar is behindthe numbers*/
+    z-index: -1; /*to make sure that the progressbar is behind the numbers*/
     transition: 0.4s ease;
 }
 
