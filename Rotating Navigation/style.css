@@ -72,6 +72,10 @@ body{
     transition-delay: 0.3s;
 }
 
+.container.show-nav .circle{
+    transform: rotate(-70deg); /* the cicle showing the menu button rotate to display the next button*/
+}
+
 nav{
     position: fixed;
     bottom: 40px;
