@@ -2,10 +2,14 @@
 
 An animated login and register page built with HTML, CSS and JavaScript.
 The project focuses on smooth UI transitions and user experience.
+
 ## Preview
 
 ![Preview](./preview/preview1.png)
 ![Preview](./preview/preview2.png)
+
+## Demo
+   👉 [Demo](https://le-prince-fouda.github.io/Projets-HTML-CSS/Login_register_page/animated_loginRegisterPage1/)
 
 ## Features
 
