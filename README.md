@@ -1,3 +1,6 @@
+This repository contains multiple small front-end projects built with HTML, CSS and JavaScript to practice UI components, animations and interactions.
+
+
 ### 🚀 Expanding cards
    👉 [Expanding cards - Demo](https://le-prince-fouda.github.io/Projets-HTML-CSS/Expanding_cards/) <br>  
 ### 🚀 Progress Steps
